@@ -1,5 +1,48 @@
 # Changelog
 
+## 1.0.16
+
+- We now emit messages from sub-tasks in -p mode (look for the parent_tool_use_id property)
+
+## 1.0.11
+
+- Claude Code can now also be used with a Claude Pro subscription
+- Added /upgrade for smoother switching to Claude Max plans
+- Improved UI for authentication from API keys and Bedrock/Vertex/external auth tokens
+- Improved shell configuration error handling
+- Improved todo list handling during compaction
+
+## 1.0.10
+
+- Added markdown table support
+- Improved streaming performance
+
+## 1.0.8
+
+- Fixed Vertex AI region fallback when using CLOUD_ML_REGION
+- Increased default otel interval from 1s -> 5s
+- Fixed edge cases where MCP_TIMEOUT and MCP_TOOL_TIMEOUT weren't being respected
+- Fixed a regression where search tools unnecessarily asked for permissions
+- Added support for triggering thinking non-English languages
+- Improved compacting UI
+
+## 1.0.7
+
+- Renamed /allowed-tools -> /permissions
+- Migrated allowedTools and ignorePatterns from .claude.json -> settings.json
+- Deprecated claude config commands in favor of editing settings.json
+- Fixed a bug where --dangerously-skip-permissions sometimes didn't work in --print mode
+- Improved error handling for /install-github-app
+- Bugfixes, UI polish, and tool reliability improvements
+
+## 1.0.6
+
+- Improved edit reliability for tab-indented files
+- Respect CLAUDE_CONFIG_DIR everywhere
+- Reduced unnecessary tool permission prompts
+- Added support for symlinks in @file typeahead
+- Bugfixes, UI polish, and tool reliability improvements
+
 ## 1.0.4
 
 - Fixed a bug where MCP tool errors weren't being parsed correctly
